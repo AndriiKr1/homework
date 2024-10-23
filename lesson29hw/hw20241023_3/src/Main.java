@@ -12,19 +12,32 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        List<Product> products = initProducts();
 
+        displayProduct(products);
+
+        List<Product> cart = getUserList(products);
+
+        displayList(cart);
+    }
+
+    public static List<Product> initProducts() {
         List<Product> products = new ArrayList<>();
         products.add(new Product(1, "Телевізор", 400));
         products.add(new Product(2, "Ноутбук", 1300));
         products.add(new Product(3, "Телефон", 250));
         products.add(new Product(4, "Годинник", 80));
+        return products;
+    }
 
-
+    public static void displayProduct(List<Product> products) {
         System.out.println("Список товарів: ");
         for (Product product : products) {
             System.out.println(product);
         }
+    }
 
+    public static List<Product> getUserList(List<Product> products) {
         List<Product> list = new ArrayList<>();
         Scanner scanner = new Scanner(System.in);
 
@@ -37,25 +50,29 @@ public class Main {
             if (prodId == 0) {
                 break;
             }
-Product selectedProduct = null;
+            Product selectedProduct = null;
             for (Product product : products) {
-                if (product.getId() == prodId){
-                    selectedProduct=product;
+                if (product.getId() == prodId) {
+                    selectedProduct = product;
                     break;
                 }
             }
-            if (selectedProduct != null){
+            if (selectedProduct != null) {
                 list.add(selectedProduct);
-                System.out.println(selectedProduct.getName()+ " добавлений в кошик.");
+                System.out.println(selectedProduct.getName() + " добавлений в кошик.");
             } else {
                 System.out.println("Товар з таким номером не знайдено");
             }
         }
+        return list;
+    }
+
+    public static void displayList(List<Product> list) {
         System.out.println("\nВаш список покупок: ");
-        if (list.isEmpty()){
+        if (list.isEmpty()) {
             System.out.println("Ваш кошик пустий.");
-        }else {
-            for (Product product : list){
+        } else {
+            for (Product product : list) {
                 System.out.println(product);
             }
         }
