@@ -8,26 +8,26 @@
 import java.util.ArrayList;
 import java.util.List;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
-        List<Integer> numbers = new ArrayList<>();
-            numbers.add(10);
-            numbers.add(12);
-            numbers.add(7);
-            numbers.add(6);
-            numbers.add(12);
-            numbers.add(89);
-            numbers.add(54);
-
-
+        List<Integer> numbers =List.of(10,12,7,6,12,89);
         int filter = 33;
+
+        List<Integer> filterNumbers = filterNumbersGreaterThan(numbers,filter);
+        System.out.println("Числа більше " + filter + ": " + filterNumbers);
+    }
+
+    public static List<Integer> filterNumbersGreaterThan(List<Integer> numbers, int filter) {
         List<Integer> result = new ArrayList<>();
-        for(int number : numbers){
-            if(number > filter){
+        for (int number : numbers) {
+            if (number > filter) {
                 result.add(number);
             }
         }
-        System.out.println("Числа більше " + filter + ": " +result);
+        return result;
     }
 }
