@@ -8,8 +8,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,7 +21,7 @@ public class Main {
 
     public static List<Integer> filterNumbersGreaterThan(List<Integer> numbers, int filter) {
         List<Integer> result = new ArrayList<>();
-        for (int number : numbers) {
+        for (Integer number : numbers) {
             if (number > filter) {
                 result.add(number);
             }
