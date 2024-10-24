@@ -21,6 +21,9 @@ public class Main {
 
     public static List<Integer> filterNumbersGreaterThan(List<Integer> numbers, int filter) {
         List<Integer> result = new ArrayList<>();
+        if (numbers==null){
+            return result;
+        }
         for (Integer number : numbers) {
             if (number > filter) {
                 result.add(number);
