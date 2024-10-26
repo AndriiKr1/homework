@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         // Ініціалізація списку продуктів за допомогою ArrayList та List.of для створення початкових значень
         List<Product> productsList = new ArrayList<>(List.of(
                 new Product("Laptop", 1200, 4.5, 15),
@@ -17,15 +19,16 @@ public class Main {
                 new Product("Webcam", 70, 4.3, 60)
         ));
         //System.out.println(productsList);
-        int choice = getSortChoice(); // Виклик методу getSortChoice для отримання вибору сортування від користувача
+        int choice = getSortChoice(scanner); // Виклик методу getSortChoice для отримання вибору сортування від користувача
 
         sortProducts(productsList, choice); // Виклик методу sortProducts для сортування списку продуктів на основі вибору користувача
         printSortProduct(productsList); // Виклик методу printSortProduct для відображення відсортованого списку продуктів
+
+        scanner.close();
     }
 
     // Метод для запиту у користувача критерію сортування
-    public static int getSortChoice() {
-        Scanner scanner = new Scanner(System.in); // Створення об'єкта Scanner для зчитування введення з консолі
+    public static int getSortChoice(Scanner scanner) {
         System.out.println("Як ви хочете сортувати продукти?");
         System.out.println("1. По ціні зростання");
         System.out.println("2. По ціні спадання");
@@ -58,4 +61,5 @@ public class Main {
             System.out.println(result); // Вивід кожного продукту на консоль
         }
     }
+
 }
