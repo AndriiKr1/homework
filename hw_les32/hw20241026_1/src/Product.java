@@ -29,7 +29,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("Product '%s', €%.2f, rating=%.1f, stock=%d",
+        return String.format("Товар '%s', €%.2f, рейтинг: %.1f, на складі: %d",
                 name, price, rating, stock);
     }
 }
