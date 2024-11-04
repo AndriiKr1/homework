@@ -10,7 +10,7 @@ public class Main {
         map.put("b", "Micke");
 
         System.out.println("До swap: " + map);
-swapValue(map, "a", "b");
+        swapValue(map, "a", "b");
         System.out.println("Після swap: " + map);
 
         swapValue(map, "a", "c");
