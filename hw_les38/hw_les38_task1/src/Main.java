@@ -11,8 +11,8 @@ import java.util.Map;
 public class Main {
     public static void main(String[] args) {
         List<String> str = List.of("jack","john","nick","jack","mike","ann","john");
-        Map<String, Boolean> resultMap = checkStringDuplicates(str);
-        System.out.println(resultMap);
+
+        System.out.println(checkStringDuplicates(str));
     }
     public static Map<String, Boolean> checkStringDuplicates(List<String> str){
         Map<String,Integer> newMap=new HashMap<>();
