@@ -67,7 +67,7 @@ class MainTest {
 
     @Test
     void testEmptyMap() {
-        Map<Person, List<Account>> accountMap = Map.of(); // Empty map
+        Map<Person, List<Account>> accountMap = Map.of();
 
         Assertions.assertFalse(Main.hasIncorrectAccounts(accountMap), "Ожидалось отсутствие ошибок для пустой карты");
     }
