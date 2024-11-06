@@ -12,7 +12,7 @@ public class Main {
         Account account3 = new Account("DE555555555", BigDecimal.valueOf(1500), john); // Неправильно записанный счет
 
         Map<Person, List<Account>> accountMap = Map.of(
-                john, List.of(account1, account2), // Ошибка: account2 принадлежит Анне
+                john, List.of(account1,account2), // Ошибка: account2 принадлежит Анне
                 anna, List.of(account3) // Ошибка: account3 принадлежит Джону
         );
 
