@@ -15,15 +15,22 @@ public class Main {
         System.out.println(checkStringDuplicates(str));
     }
     public static Map<String, Boolean> checkStringDuplicates(List<String> str){
-        Map<String,Integer> newMap=new HashMap<>();
-        for (String s : str){
-            newMap.put(s, newMap.getOrDefault(s,0)+1);
+        // Проверка на null
+        if (str == null) {
+            return new HashMap<>();  // Возвращаем пустую карту, если список null
         }
+
+        Map<String, Integer> newMap = new HashMap<>();
+        for (String s : str){
+            newMap.put(s, newMap.getOrDefault(s, 0) + 1);
+        }
+
         Map<String, Boolean> result = new HashMap<>();
         for (Map.Entry<String, Integer> entry : newMap.entrySet()){
-            result.put(entry.getKey(), entry.getValue()>1);
+            result.put(entry.getKey(), entry.getValue() > 1);
         }
-         return result;
+
+        return result;
     }
 
 }
