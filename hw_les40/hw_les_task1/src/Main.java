@@ -28,6 +28,4 @@ public class Main {
         autoList.sort((a1, a2) -> Integer.compare(a1.getYear(), a2.getYear()));
         System.out.println("\nSorted by Year:" + autoList);
     }
-
-
 }
