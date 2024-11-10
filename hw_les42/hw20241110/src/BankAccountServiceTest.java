@@ -70,7 +70,7 @@ class BankAccountServiceTest {
                 "klaudia@gmail.com", new BankAccount(new Person("Klaudia", "Schneider", "klaudia@gmail.com"), "DE6677889900", 8000.0)
         );
 
-        List<String> expectedResult = List.of( "Klaudia Schneider", "Erika Muster","Petra Meyer");
+        List<String> expectedResult = List.of("Klaudia Schneider", "Erika Muster", "Petra Meyer");
 
         List<String> actualResult = service.getTopClientsByBalance(accountMap);
 

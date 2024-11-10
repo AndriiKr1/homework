@@ -7,7 +7,7 @@ public class BankAccountService {
 
     //    a)    map где ключом будет owner (Person), а значением будет баланс (Double)
     public Map<Person, Double> getOwnerToBalanceMap(List<BankAccount> accounts) {
-        if (accounts==null || accounts.isEmpty()){
+        if (accounts == null || accounts.isEmpty()) {
             return Collections.emptyMap();
         }
         return accounts.stream()
@@ -16,7 +16,7 @@ public class BankAccountService {
 
     //     b)   map где ключом будет IBAN (String), а значением будет owner (Person)
     public Map<String, Person> getIbanToOwnerMap(List<BankAccount> accounts) {
-        if (accounts==null || accounts.isEmpty()){
+        if (accounts == null || accounts.isEmpty()) {
             return Collections.emptyMap();
         }
         return accounts.stream()
@@ -25,7 +25,7 @@ public class BankAccountService {
 
     //    c)    map где ключом будет IBAN (String), а значением будет строка  J.Jack (т.e. первая буква fName и lName)
     public Map<String, String> getIbanToInitialMap(List<BankAccount> accounts) {
-        if (accounts==null || accounts.isEmpty()){
+        if (accounts == null || accounts.isEmpty()) {
             return Collections.emptyMap();
         }
         return accounts.stream()

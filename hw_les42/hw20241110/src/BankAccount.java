@@ -22,9 +22,10 @@ public class BankAccount {
     public double getBalance() {
         return balance;
     }
+
     @Override
     public String toString() {
-        return String.format("%s %5.2f %s",IBAN,balance,owner);
+        return String.format("%s %5.2f %s", IBAN, balance, owner);
     }
 
     @Override
