@@ -25,7 +25,7 @@ public class Person {
 
     @Override
     public String toString() {
-        return  String.format("%s %s %s",fName,lName,email);
+        return  String.format("%s %s",fName,lName);
     }
 
     @Override

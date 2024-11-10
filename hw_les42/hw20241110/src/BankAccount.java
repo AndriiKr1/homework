@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class BankAccount {
     private final Person owner;
     private final String IBAN;
@@ -19,5 +21,26 @@ public class BankAccount {
 
     public double getBalance() {
         return balance;
+    }
+    @Override
+    public String toString() {
+        return String.format("%s %5.2f %s",IBAN,balance,owner);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        BankAccount that = (BankAccount) o;
+        return Double.compare(balance, that.balance) == 0 && Objects.equals(owner, that.owner) && Objects.equals(IBAN, that.IBAN);
+    }
+
+    @Override
+    public int hashCode() {
+        int result = Objects.hashCode(owner);
+        result = 31 * result + Objects.hashCode(IBAN);
+        result = 31 * result + Double.hashCode(balance);
+        return result;
     }
 }
