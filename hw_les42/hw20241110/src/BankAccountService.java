@@ -50,7 +50,7 @@ public class BankAccountService {
                 .sorted((a, b) -> Double.compare(b.getBalance(), a.getBalance()))
                 .limit(3)
                 .map(acc -> acc.getOwner().getfName() + " " + acc.getOwner().getlName())
-                .collect(Collectors.toList());
+                .toList();
 
     }
 
