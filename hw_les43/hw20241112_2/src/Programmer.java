@@ -25,7 +25,7 @@ public class Programmer {
 
     @Override
     public String toString() {
-        return   String.format("Programmer: %-15s | City: %-10s | Number of tasks: %d",
+        return   String.format("Programmer: %s | City: %s | Number of tasks: %d",
                 name, city, tasks.size());
     }
 }

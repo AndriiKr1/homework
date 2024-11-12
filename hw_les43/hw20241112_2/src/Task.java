@@ -11,13 +11,25 @@ public class Task {
         this.daysInProcessing = daysInProcessing;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
     public int getDaysInProcessing() {
         return daysInProcessing;
     }
 
     @Override
     public String toString() {
-        return String.format("Task {Number=%d, Description='%s', Status='%s', Days in Processing=%d}",
+        return String.format("Task #%d: %s | Status: %s | Days in processing: %d",
                 number, description, status, daysInProcessing);
     }
 }
