@@ -17,9 +17,9 @@ public class Main {
         System.out.println("Введіть email:");
         String email = scanner.nextLine();
 
-        // Проверка email
+
         if (email.length() < 5 || !email.contains("@") || email.startsWith("@") || email.endsWith("@")) {
-            throw new NotCorrectEmailFormatException("Некорректный формат email.");
+            throw new NotCorrectEmailFormatException("Некорректний формат email.");
         }
 
         return email;
