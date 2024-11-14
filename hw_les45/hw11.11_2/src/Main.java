@@ -8,7 +8,7 @@ public class Main {
         } catch (ProgrammerBusyException e) {
             System.out.println("Програміст зайнятий іншою задачою або курить");
         } catch (ProgrammerUnavailableNowException e) {
-            System.out.println("Програміст в запої");
+            System.out.println("У программіста нервовий зрив");
         }
     }
 }
