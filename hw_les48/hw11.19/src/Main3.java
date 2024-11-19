@@ -20,9 +20,9 @@ public class Main3 {
                 }
             }
         } catch (IOException e) {
-            System.out.println("Сталася помилка під час читання файлу: " + e.getMessage());
+            System.out.println("Сталася помилка під час читання файлу: ");
         } catch (NumberFormatException e) {
-            System.out.println("Помилка формату числа: " + e.getMessage());
+            System.out.println("Помилка формату числа: " );
         }
 
 
