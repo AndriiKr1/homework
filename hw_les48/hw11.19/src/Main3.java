@@ -6,7 +6,7 @@ import java.util.List;
 
 public class Main3 {
     public static void main(String[] args) {
-        String fileName = "persons.txt"; // Ім'я файлу з інформацією
+        String fileName = "persons.txt";
         List<Person> persons = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
