@@ -32,14 +32,6 @@ public class AttendanceLog {
     @Override
     public String toString() {
         return String.format("%d: %d: %s %s", id, employeeId, checkIn, checkOut);
-                /*
-                        return String.format(
-                        "Журнал відвідувань: {ID запису: %d, ID працівника: %d, Час входу: %s, Час виходу: %s}",
-                        logId,
-                        employeeId,
-                        checkInTime.format(formatter),
-                        checkOutTime.format(formatter)
-               );
-               */
+
     }
 }
